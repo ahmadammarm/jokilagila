@@ -97,7 +97,7 @@ export const Banner = () => {
                                     </Link>
                                 </div>
                             </div>
-                            <div className="flex justify-center items-center mt-10" data-aos="fade-down">
+                            <div className="flex justify-center items-center mt-10">
                                 {/* Navigation buttons */}
                                 <button
                                     onClick={prevSlide}
