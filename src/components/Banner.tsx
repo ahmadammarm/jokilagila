@@ -47,7 +47,7 @@ export const Banner = () => {
     };
 
     return (
-        <div className="relative w-full h-screen overflow-hidden">
+        <div className="relative w-full h-screen py-16">
             {slides.map((slide, index) => (
                 <div
                     key={index}
