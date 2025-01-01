@@ -58,12 +58,15 @@ export const Banner = () => {
                     <div
                         className="w-full h-full flex items-center bg-cover bg-center relative"
                         style={{
-                            backgroundImage: `url('${slide.image}')`
+                            backgroundImage: `url('${slide.image}')`,
+                            backgroundSize: 'cover',
+                            backgroundAttachment: 'fixed',
+                            backgroundPosition: 'center',
                         }}
                     >
                         <div className="absolute inset-0 bg-black opacity-80"></div>
 
-                        <div className="container mx-auto relative mt-24 z-10">
+                        <div className="container mx-auto relative mt-28 z-10">
                             <div className="grid lg:grid-cols-2 gap-12 items-center md:gap-8">
                                 <div 
                                     className="flex justify-center lg:justify-end md:mb-0 pr-0 md:pr-10 order-1 md:order-2" 
@@ -93,7 +96,7 @@ export const Banner = () => {
                                     </Link>
                                 </div>
                             </div>
-                            <div className="flex justify-center items-center mt-10">
+                            <div className="flex justify-center items-center mt-10 mb-10">
                                 <button
                                     onClick={prevSlide}
                                     className="transform bg-blue-600/50 p-2 rounded-full text-white hover:bg-blue-600 transition-colors z-20 mr-7"
