@@ -5,10 +5,10 @@ import Link from "next/link";
 
 export default function HomePage() {
     return (
-        <div className="flex items-center justify-center h-screen">
+        <div className="flex items-center justify-center h-screen px-4">
             <Card className="p-5">
                 <CardTitle className="text-center">
-                    Maaf, Jokilagila masih dalam tahap pengembangan yaa
+                    Maaf, Jokilagila masih dalam tahap pengembangan yaa 
                 </CardTitle>
                 <CardContent>
                     <p className="text-center mt-5">
