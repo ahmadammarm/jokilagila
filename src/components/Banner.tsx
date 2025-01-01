@@ -8,7 +8,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 export const Banner = () => {
-    const [offsetY, setOffsetY] = useState(0);
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const slides = [
@@ -32,19 +31,11 @@ export const Banner = () => {
         },
     ];
 
-    const handleScroll = () => {
-        setOffsetY(window.scrollY * 0.5);
-    };
-
     useEffect(() => {
-
         AOS.init({
-            duration: 2000
+            duration: 2000,
+            once: true
         });
-
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     const nextSlide = () => {
@@ -56,41 +47,46 @@ export const Banner = () => {
     };
 
     return (
-        <div className="relative w-full min-h-screen overflow-x-hidden">
+        <div className="relative w-full h-screen overflow-hidden">
             {slides.map((slide, index) => (
                 <div
                     key={index}
-                    className={`absolute w-full min-h-screen transition-opacity duration-500 ${currentSlide === index ? "opacity-100" : "opacity-0 pointer-events-none"
-                        }`}
+                    className={`absolute w-full h-full transition-opacity duration-500 ${
+                        currentSlide === index ? "opacity-100" : "opacity-0 pointer-events-none"
+                    }`}
                 >
                     <div
-                        className="w-full min-h-screen flex items-center pt-12 bg-cover bg-center relative py-14"
+                        className="w-full h-full flex items-center bg-cover bg-center relative"
                         style={{
-                            backgroundImage: `url('${slide.image}')`,
-                            backgroundPositionY: `${offsetY}px`,
+                            backgroundImage: `url('${slide.image}')`
                         }}
                     >
                         <div className="absolute inset-0 bg-black opacity-80"></div>
 
-                        <div className="container mx-auto relative z-10 mt-10">
+                        <div className="container mx-auto relative mt-24 z-10">
                             <div className="grid lg:grid-cols-2 gap-12 items-center md:gap-8">
-                                <div className="flex justify-center lg:justify-end md:mb-0 pr-0 md:pr-10 order-1 md:order-2 mt-20" data-aos="fade-left">
+                                <div 
+                                    className="flex justify-center lg:justify-end md:mb-0 pr-0 md:pr-10 order-1 md:order-2" 
+                                    data-aos="fade-left"
+                                >
                                     <img
                                         className="w-[20rem] lg:w-[70%] rounded-[100%] transition-transform duration-500 hover:scale-105"
                                         src={slide.imageUrl}
                                         alt=""
-                                        loading="lazy" />
+                                        loading="lazy" 
+                                    />
                                 </div>
-                                <div className="text-center lg:text-left space-y-4 pl-0 md:pl-8 order-2 md:order-1" data-aos="fade-right">
-                                    <h1
-                                        className="text-white text-4xl lg:text-6xl font-bold cursor-default mt-14 mb-10 px-3 font-sans"
-                                    >
+                                <div 
+                                    className="text-center lg:text-left space-y-4 pl-0 md:pl-8 order-2 md:order-1" 
+                                    data-aos="fade-right"
+                                >
+                                    <h1 className="text-white text-4xl lg:text-6xl font-bold cursor-default mb-10 px-3 font-sans">
                                         {slide.title} <span className="text-blue-600 font-sans">{slide.titleHighlight}</span>
                                     </h1>
                                     <p className="text-white text-lg lg:text-xl leading-relaxed font-medium cursor-default px-3 font-sans">
                                         {slide.description}
                                     </p>
-                                    <Link href={slide.buttonLink} className="px-3">
+                                    <Link href={slide.buttonLink} className="px-3 inline-block">
                                         <Button className="px-8 py-3 bg-blue-600 border-primary text-blue-50 font-bold rounded-lg hover:bg-white hover:text-primary transition duration-300 mt-10">
                                             {slide.buttonText}
                                         </Button>
@@ -98,7 +94,6 @@ export const Banner = () => {
                                 </div>
                             </div>
                             <div className="flex justify-center items-center mt-10">
-                                {/* Navigation buttons */}
                                 <button
                                     onClick={prevSlide}
                                     className="transform bg-blue-600/50 p-2 rounded-full text-white hover:bg-blue-600 transition-colors z-20 mr-7"
@@ -116,8 +111,6 @@ export const Banner = () => {
                     </div>
                 </div>
             ))}
-
-
         </div>
     );
 };
