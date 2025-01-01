@@ -1,6 +1,8 @@
 "use client"
 
 import Banner from "@/components/Banner";
+import Contact from "@/components/Contact";
+import About from "@/components/homepage/About";
 import Loading from "@/components/Loading";
 import { useState } from "react";
 
@@ -21,6 +23,8 @@ export default function HomePage() {
     return (
         <div>
             <Banner />
+            <About />
+            <Contact />
         </div>
     )
 }
