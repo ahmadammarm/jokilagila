@@ -46,7 +46,7 @@ export default function Navbar() {
                         <Link href="/" className="text-xl font-bold text-gray-800">
                             <img src="/logo.png" width={60} height={60} alt="logo" />
                         </Link>
-                        <Link href="/" className="ml-3 text-3xl md:text-4xl font-bold font-sans">
+                        <Link href="/" className="hidden md:flex ml-3 text-3xl md:text-4xl font-bold font-sans">
                             Jokilagila
                         </Link>
                     </div>
