@@ -6,7 +6,6 @@ import { Menu } from 'lucide-react'
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "./ui/button"
 import { usePathname } from "next/navigation"
-import Image from "next/image"
 
 const navItems = [
     { href: "/", label: "Beranda" },
