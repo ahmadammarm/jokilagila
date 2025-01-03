@@ -1,10 +1,11 @@
 "use client"
 
+import HeaderBanner from "@/components/HeaderBanner";
 import Loading from "@/components/Loading";
 import PerbaikanCard from "@/components/PerbaikanCard";
 import { useState } from "react";
 
-export default function LayananPage() {
+export default function PortofolioPage() {
 
     const [isLoading, setIsLoading] = useState(true)
 
@@ -19,7 +20,7 @@ export default function LayananPage() {
 
     return (
         <div>
-            <PerbaikanCard title="Halaman Layanan" />
+            <PerbaikanCard title="Halaman Portofolio" />
         </div>
     )
 }

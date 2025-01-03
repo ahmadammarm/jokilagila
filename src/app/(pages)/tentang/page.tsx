@@ -1,7 +1,8 @@
 "use client"
 
+import HeaderBanner from "@/components/HeaderBanner";
+import About from "@/components/homepage/About";
 import Loading from "@/components/Loading";
-import PerbaikanCard from "@/components/PerbaikanCard";
 import { useState } from "react";
 
 export default function TentangPage() {
@@ -18,7 +19,8 @@ export default function TentangPage() {
 
     return (
         <div>
-            <PerbaikanCard title="Halaman Tentang" />
+            <HeaderBanner title="Tentang Kami" imageUrl="/aset-home/banner-1.jpg" subtitle="Tentang Kami" link="Kembali" href="/" />
+            <About />
         </div>
     )
 }

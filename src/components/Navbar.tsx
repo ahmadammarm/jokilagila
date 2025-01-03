@@ -9,10 +9,8 @@ import { usePathname } from "next/navigation"
 
 const navItems = [
     { href: "/", label: "Beranda" },
-    { href: "/tentang", label: "Tentang" },
-    { href: "/layanan", label: "Layanan" },
+    { href: "/portofolio", label: "Portofolio" },
     { href: "/tim", label: "Tim" },
-    { href: "/kontak", label: "Kontak" },
 ]
 
 export default function Navbar() {

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button } from "../ui/button";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -68,19 +68,19 @@ export const Banner = () => {
 
                         <div className="container mx-auto relative mt-28 z-10">
                             <div className="grid lg:grid-cols-2 gap-12 items-center md:gap-8">
-                                <div 
-                                    className="flex justify-center lg:justify-end md:mb-0 pr-0 md:pr-10 order-1 md:order-2" 
+                                <div
+                                    className="flex justify-center lg:justify-end md:mb-0 pr-0 md:pr-10 order-1 md:order-2"
                                     data-aos="fade-left"
                                 >
                                     <img
                                         className="w-[20rem] lg:w-[70%] rounded-[100%] transition-transform duration-500 hover:scale-105"
                                         src={slide.imageUrl}
                                         alt=""
-                                        loading="lazy" 
+                                        loading="lazy"
                                     />
                                 </div>
-                                <div 
-                                    className="text-center lg:text-left space-y-4 pl-0 md:pl-8 order-2 md:order-1" 
+                                <div
+                                    className="text-center lg:text-left space-y-4 pl-0 md:pl-8 order-2 md:order-1"
                                     data-aos="fade-right"
                                 >
                                     <h1 className="text-white text-4xl lg:text-6xl font-bold cursor-default mb-10 px-3 font-sans">

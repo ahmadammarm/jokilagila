@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Facebook, Instagram, Youtube, MapPin, Phone, Mail, Linkedin } from 'lucide-react'
+import { Instagram, Linkedin } from 'lucide-react'
 
 const Footer = () => {
     return (
@@ -41,10 +41,8 @@ const Footer = () => {
                         <ul className="space-y-2">
                             {[
                                 { href: '/', label: 'Beranda' },
-                                { href: '/tentang', label: 'Tentang' },
-                                { href: '/layanan', label: 'Layanan' },
+                                { href: '/portofolio', label: 'Portofolio' },
                                 { href: '/tim', label: 'Tim' },
-                                { href: '/kontak', label: 'Kontak' }
                             ].map((item) => (
                                 <li key={item.href}>
                                     <Link
@@ -68,12 +66,11 @@ const Footer = () => {
                                 'Desain Grafis'
                             ].map((item) => (
                                 <li>
-                                    <Link
-                                        href={`/layanan`}
-                                        className="text-gray-300 hover:text-blue-500 transition-colors"
+                                    <p
+                                        className="text-gray-300 pointer-events-none"
                                     >
                                         {item}
-                                    </Link>
+                                    </p>
                                 </li>
                             ))}
                         </ul>
@@ -84,10 +81,10 @@ const Footer = () => {
                         <ul className="space-y-2">
                             <li>
                                 <Link
-                                    href="/tentang"
+                                    href="/portofolio"
                                     className="text-gray-300 hover:text-blue-500 transition-colors"
                                 >
-                                    Tentang Kami
+                                    Portofolio Kami
                                 </Link>
                             </li>
                             <li>
@@ -96,14 +93,6 @@ const Footer = () => {
                                     className="text-gray-300 hover:text-blue-500 transition-colors"
                                 >
                                     Tim Kami
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href="/kontak"
-                                    className="text-gray-300 hover:text-blue-500 transition-colors"
-                                >
-                                    Hubungi Kami
                                 </Link>
                             </li>
                         </ul>
