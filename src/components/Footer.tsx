@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Facebook, Instagram, Youtube, MapPin, Phone, Mail } from 'lucide-react'
+import { Facebook, Instagram, Youtube, MapPin, Phone, Mail, Linkedin } from 'lucide-react'
 
 const Footer = () => {
     return (
@@ -27,8 +27,11 @@ const Footer = () => {
                             Kami menyediakan layanan pembuatan website, desain UI / UX, pengembangan Internet of Things, dan desain grafis.
                         </p>
                         <div className="flex gap-4 mt-6">
-                            <Link href="https://instagram.com/jokilagila" className="hover:text-blue-500 transition-colors">
+                            <Link href="https://instagram.com/jokilagila" className="hover:text-blue-500 transition-colors" target="blank">
                                 <Instagram className="w-6 h-6" />
+                            </Link>
+                            <Link href="https://www.linkedin.com/company/jokilagila-solutions" className="hover:text-blue-500 transition-colors" target="blank">
+                                <Linkedin className="w-6 h-6" />
                             </Link>
                         </div>
                     </div>
