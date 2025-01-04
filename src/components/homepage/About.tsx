@@ -41,7 +41,7 @@ const About = () => {
         <div className="mt-20 md:mt-0 overflow-hidden">
             <div className="py-16 md:py-24 md:mt-0">
                 <h1
-                    className="text-4xl md:text-5xl font-bold text-center mb-20 relative"
+                    className="text-4xl md:text-5xl font-bold text-center mt-10 mb-20 relative"
                     data-aos="fade-up"
                     data-aos-duration="800"
                 >

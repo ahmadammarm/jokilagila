@@ -6,7 +6,7 @@ export const tim: Tim[] = [
         peran: "Web Developer",
         linkedin: "https://www.linkedin.com/in/ahmadammarmusyaffa",
         instagram: "https://instagram.com/ahmadammrm",
-        foto: ""
+        foto: "/tim/ammar.jpg"
     },
     {
         nama: "Ahmad Ammar Musyaffa",
