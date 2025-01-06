@@ -42,7 +42,7 @@ const Footer = () => {
                             {[
                                 { href: '/', label: 'Beranda' },
                                 { href: '/portofolio', label: 'Portofolio' },
-                                { href: '/tim', label: 'Tim' },
+                                // { href: '/tim', label: 'Tim' },
                             ].map((item) => (
                                 <li key={item.href}>
                                     <Link
@@ -87,14 +87,14 @@ const Footer = () => {
                                     Portofolio Kami
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link
                                     href="/tim"
                                     className="text-gray-300 hover:text-blue-500 transition-colors"
                                 >
                                     Tim Kami
                                 </Link>
-                            </li>
+                            </li> */}
                         </ul>
                     </div>
                 </div>
