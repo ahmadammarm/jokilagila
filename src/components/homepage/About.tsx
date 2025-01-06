@@ -115,11 +115,11 @@ const About = () => {
                             </span>
                         </div>
                         <Separator className="my-12 md:my-0" />
-                        <Link href="/tentang" data-aos="fade-up" data-aos-delay="300">
+                        {/* <Link href="/tentang" data-aos="fade-up" data-aos-delay="300">
                             <Button>
                                 Selengkapnya
                             </Button>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
 

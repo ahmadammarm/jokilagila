@@ -52,7 +52,7 @@ export default function Navbar() {
                     {/* Desktop menu */}
                     <div className="hidden md:block">
                         <div className="ml-10 flex items-baseline space-x-4">
-                            {navItems.map((item) => (
+                            {/* {navItems.map((item) => (
                                 <Link
                                     key={item.href}
                                     href={item.href}
@@ -60,13 +60,13 @@ export default function Navbar() {
                                 >
                                     {item.label}
                                 </Link>
-                            ))}
+                            ))} */}
                         </div>
                     </div>
 
                     {/* Mobile menu */}
                     <div className="md:hidden">
-                        <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                        {/* <Sheet open={isOpen} onOpenChange={setIsOpen}>
                             <SheetTrigger asChild>
                                 <Button
                                     variant={"outline"}
@@ -96,7 +96,7 @@ export default function Navbar() {
                                     </div>
                                 </div>
                             </SheetContent>
-                        </Sheet>
+                        </Sheet> */}
                     </div>
                 </div>
             </div>
